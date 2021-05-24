@@ -1,0 +1,231 @@
+body {
+  font-family: 'Montserrat', sans-serif;
+  font-weight: 300;
+  text-align: center;
+  background: #735432;
+}
+
+.container, .maps, .desc {
+  display: flex;
+  text-align: center;
+  flex-direction: column;
+  align-items: center;
+  align-self: center;
+  border-radius: 25px;
+}
+
+.heading {
+  color: #f2f5f7;
+  font-size: 28pt;
+  margin-top: 60px;
+  text-shadow: 3px 3px #503d2b;
+}
+
+.desc {
+  background-color: #f2f5f7;
+  margin: 30px 11vw 30px 11vw;
+  width: 70vw;
+  max-width: 1000px;
+  overflow: auto;
+  padding: 20px 40px 20px 40px;
+  box-sizing: border-box;
+}
+
+#viewDiv {
+  position: relative;
+  height: 75vh; max-height: 800px; width: 70vw; max-width: 1000px;
+  border-radius: 25px;
+  border: 5px solid #f2f5f7;
+  box-sizing: border-box;
+}
+
+canvas {
+  border-radius: 20px;
+}
+
+div.esri-legend__layer-caption {
+  display:none;
+}
+
+.esri-attribution__sources > .esri-interactive {
+  border-bottom-left-radius: 15px;
+}
+div.esri-attribution__powered-by {
+  border-bottom-right-radius: 15px;
+}
+
+div.mapboxgl-popup-content {
+  font-family: 'Montserrat', sans-serif;
+  white-space: pre-wrap
+  width: 240px;
+  display: flex;
+  text-align: left;
+  flex-direction: column;
+  align-items: flex-start;
+  align-self: flex-start;
+  border-radius: 10px;
+  color: #503d2b;
+  font-size: 11pt;
+}
+
+button.mapboxgl-popup-close-button {
+  top: 8px;
+  right: 8px;
+  font-size: 11pt;
+}
+
+#menu {
+   position: absolute;
+   z-index: 1;
+   top: 30px;
+   right: 30px;
+   background: #fff;
+   width: 150px;
+   border-radius: 15px;
+}
+
+#menu a {
+  font-family: 'Montserrat', sans-serif;
+  font-size: 11pt;
+  color: #544530;
+  display: block;
+  margin: 0;
+  padding: 0;
+  padding: 10px;
+  text-decoration: none;
+  border-bottom: 1px solid rgba(0, 0, 0, 0.25);
+  text-align: center;
+}
+
+#menu a:last-child {
+  border: none;
+}
+
+#menu a:first-child:hover, #menu a.active:first-child {
+  border-top-left-radius: 15px;
+  border-top-right-radius: 15px;
+}
+
+#menu a:last-child:hover, #menu a.active:last-child {
+  border-bottom-left-radius: 15px;
+  border-bottom-right-radius: 15px;
+}
+
+#menu a:hover {
+  background-color: #dedede;
+  color: #000000;
+  transition:  all 0.5s ease 0s;
+}
+
+#menu a.active {
+  background-color: #f2ecb8;
+  color: #544530;
+}
+
+#menu a.active:hover {
+  background: #ccc583;
+  color: #000000;
+}
+
+p {
+  font-size: 13pt;
+  color: #503d2b;
+  line-height: 1.5;
+}
+
+footer p {
+  color: #f2f5f7;l
+}
+
+.pageBtn {
+  background-color: #D88373;
+  border-radius: 3.125em;
+  padding: 0 15px 0 15px;
+  margin-bottom: 10px;
+}
+
+a {
+  text-decoration: none;
+}
+
+a:hover.pageBtn {
+  background-color: #c76c5a;
+  transition: all 0.5s ease 0s;
+}
+a.pageBtn:hover > p {
+  color: #000000;
+  transition: all 0.5s ease 0s;
+}
+.map-overlay {
+  position: absolute;
+  z-index: 1;
+  bottom: 10px;
+  right: 10px;
+  background: rgba(45, 29, 11, 0.8);
+  width: 120px;
+  border-radius: 15px;
+  margin-right: 20px;
+  overflow: auto;
+
+}
+
+div#legend.map-overlay {
+  display: flex;
+  align-items: flex-start;
+  flex-direction: column;
+}
+
+.labels {
+  font-family: 'Montserrat', sans-serif;;
+      color: #f2f5f7;
+  font-size: 12pt;
+}
+
+#legend {
+  padding: 15px 15px 0px 15px;
+  box-shadow: 0 1px 2px rgba(0, 0, 0, 0.1);
+  line-height: 18px;
+  height: 210px;
+  margin-bottom: 30px;
+  width: 230px;
+}
+
+.icons {
+  width: 35px;
+  height: 35px;
+  display: inline-block;
+  border-radius: 20%;
+  margin-right: 5px;
+  margin-bottom: -10px;
+}
+
+@media screen and (max-width: 950px), (max-height: 900px) {
+  #menu {
+     width: 120px;
+  }
+
+  .labels {
+    font-size: 10pt;
+  }
+
+  #legend {
+    padding: 10px 5px 10px 10px;
+    line-height: 18px;
+    height: 160px;
+    margin-bottom: 30px;
+    width: 190px;
+  }
+
+  #menu a {
+    font-size: 10pt;
+  }
+
+  .icons {
+    width: 25px;
+    height: 25px;
+    display: inline-block;
+    border-radius: 20%;
+    margin-right: 5px;
+    margin-bottom: -5px;
+  }
+}
